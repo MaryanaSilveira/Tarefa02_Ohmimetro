@@ -1,2 +1,5 @@
 # Tarefa02_Ohmimetro
 Sistema embarcado capaz de medir resistores desconhecidos na faixa de 510 Ω a 100 kΩ a partir de um conhecido de 10 kΩ e apresentar seus valores no display, além de representar visualmente suas cores através de uma matriz de LEDs WS2812.
+
+O sistema mede a resistência de um componente utilizando um divisor de tensão com um resistor conhecido e o valor lido pelo ADC (conversor analógico-digital) do RP2040. Para isso, conecta os pinos GND, 3V3 E GPIO28 da BitDogLab aos resistores através da protoboard e resistores macho-fêmea. Com o valor de ADC encontrado, calcula-se a resistência do componente desconhecido. O sistema compara o valor medido com a tabela da série E24 para encontrar o resistor comercial mais próximo.
+O resultado é exibido em um display OLED SSD1306 via I2C, que mostra o valor medido, o valor mais próximo da série E24 e as cores correspondentes às faixas do resistor. Além disso, a matriz de 25 LEDs WS2812 exibe essas cores em um padrão 5x5, representando as faixas do resistor medido, sendo a quarta faixa de 5% de tolerância.
