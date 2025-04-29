@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = 'build/Tarefa02_Ohmimetro.uf2'
+elf = 'build/Tarefa02_Ohmimetro.elf'
